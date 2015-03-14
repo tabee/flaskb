@@ -7,7 +7,6 @@ from demo_app.logikmodule import User
 name_app = app.config.get('APPLICATION_NAME')
 user = User()
 
-
 @app.route('/', methods=['POST', 'GET'])
 def index():
     if request.method == 'POST':
@@ -24,7 +23,6 @@ def index():
         flash('Well done! You successfully read this important alert message.')
     return render_template('index.html', app_name=name_app, username=user.name, password=user.password, error=error)
 
-
 @app.route('/secret')
 def secret():
     if not user.checklogin(user.name, user.password):
@@ -33,7 +31,6 @@ def secret():
         user.destroy()
         return redirect(url_for('index', error=error))
     return render_template('page-secret.html', app_name=name_app)
-
 
 @app.route('/killsession')
 def killsession():
