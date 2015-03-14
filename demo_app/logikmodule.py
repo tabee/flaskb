@@ -1,6 +1,5 @@
 from demo_app import app
 
-
 class User(object):
     name = "Stranger"
     password = ""
