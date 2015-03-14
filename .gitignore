@@ -1,0 +1,14 @@
+!.gitignore
+
+tests_output/
+__pycache__/
+
+.idea/*
+.idea/scopes/*
+
+.tox
+.coverage
+
+*.py[co]
+*.egg-info
+*.swp
